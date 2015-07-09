@@ -6,4 +6,4 @@ cp -rf .netrwhist ~/
 
 echo installing dotfiles to homedirectory
 
-vim :PluginInstall
+vim +PluginInstall +qall
