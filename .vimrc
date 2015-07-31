@@ -1,9 +1,8 @@
 set nocompatible
-filetype off
-
+filetype on
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
-
+" ## PLUGINS HERE ##
 " let Vundle manage Vundle
 " required!
 Bundle 'gmarik/vundle'
@@ -13,6 +12,18 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'klen/python-mode'
 Bundle 'christoomey/vim-tmux-navigator'
+
+" on try-out from John Crepezzi
+" Blend-ins
+Bundle 'sickill/vim-pasta'
+Bundle 'scrooloose/syntastic'
+Bundle 'ervandew/supertab'
+" NoBlend-ins
+Bundle 'vim-scripts/ZoomWin'
+Bundle 'vim-scripts/tComment'
+Bundle 'FelikZ/ctrlp-py-matcher'
+Bundle 'tristen/vim-sparkup'
+
 
 " General settings
 syntax on
@@ -27,10 +38,14 @@ set rnu
 
 augroup vimrc_autocmds
     autocmd!
+    "autocommands for Python
     " highlight characters past column 120
     autocmd FileType python highlight Excess ctermbg=DarkGrey guibg=Black
     autocmd FileType python match Excess /\%120v.*/
     autocmd FileType python set nowrap
+
+    "autocommands for HTML
+    autocmd FileType html setlocal sw=2 tabstop=2
     augroup END
 
 
