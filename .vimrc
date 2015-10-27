@@ -1,10 +1,11 @@
 set nocompatible
-filetype on
+filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
+call vundle#begin()
 " ## PLUGINS HERE ##
-" let Vundle manage Vundle
-" required!
+" let Vundle manage Vundle, required!
+Plugin 'VundleVim/Vundle.vim'
+
 Bundle 'gmarik/vundle'
 " The bundles you install will be listed here
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
@@ -24,13 +25,14 @@ Bundle 'vim-scripts/tComment'
 Bundle 'FelikZ/ctrlp-py-matcher'
 Bundle 'tristen/vim-sparkup'
 
-
+call vundle#end()
 " General settings
 syntax on
 filetype indent plugin on
-colorscheme blackdust
+colorscheme molokai
 set hlsearch
 set rnu
+set t_ut=
 "
 "
 "Autocommands
@@ -57,7 +59,7 @@ nmap <leader>t :tabnew<CR>
 
 "PLUGIN SETUPS
 " Powerline setup
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 12
 set laststatus=2
 
 " Nerdtree setup

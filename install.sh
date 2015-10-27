@@ -1,9 +1,23 @@
-cp -rf .vim ~/.vim
-cp -rf .fonts ~/.fonts
-cp -rf .tmux.conf ~/
-cp -rf .vimrc ~/
-cp -rf .netrwhist ~/
+# Claes dotfiles
 
-echo installing dotfiles to homedirectory
+#Installationvariables
 
-vim +PluginInstall +qall
+dir=~/dotfiles
+olddir=~/dotfiles_old
+files=".bashrc .vimrc .tmux.conf .vim .fonts .netrwhist"
+
+# backup of old files
+echo "Backup up dotfiles in ~"
+mkdir -p $olddir
+echo "...done"
+
+# moving files 
+for file in $files; do
+	echo "Moving any existing dotfiles from ~ to $olddir"
+	mv ~/$file ~/dotfiles_old/
+	echo "Creating symlink to $file in home directory."
+	ln -s $dir/$file ~/$file
+done
+
+source ~/.bashrc
+source ~/.vimrc
