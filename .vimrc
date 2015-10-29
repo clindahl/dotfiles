@@ -6,24 +6,23 @@ call vundle#begin()
 " let Vundle manage Vundle, required!
 Plugin 'VundleVim/Vundle.vim'
 
-Bundle 'gmarik/vundle'
 " The bundles you install will be listed here
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/nerdtree'
-Bundle 'klen/python-mode'
-Bundle 'christoomey/vim-tmux-navigator'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'klen/python-mode'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " on try-out from John Crepezzi
 " Blend-ins
-Bundle 'sickill/vim-pasta'
-Bundle 'scrooloose/syntastic'
-Bundle 'ervandew/supertab'
+Plugin 'sickill/vim-pasta'
+Plugin 'scrooloose/syntastic'
+Plugin 'ervandew/supertab'
 " NoBlend-ins
-Bundle 'vim-scripts/ZoomWin'
-Bundle 'vim-scripts/tComment'
-Bundle 'FelikZ/ctrlp-py-matcher'
-Bundle 'tristen/vim-sparkup'
+Plugin 'vim-scripts/ZoomWin'
+Plugin 'vim-scripts/tComment'
+Plugin 'FelikZ/ctrlp-py-matcher'
+Plugin 'tristen/vim-sparkup'
 
 call vundle#end()
 " General settings

@@ -4,7 +4,7 @@
 
 dir=~/dotfiles
 olddir=~/dotfiles_old
-files=".bashrc .vimrc .tmux.conf .vim .fonts .netrwhist"
+files=".bashrc .vimrc .tmux.conf adio.tmuxcolors .vim .fonts .netrwhist"
 
 # backup of old files
 echo "Backup up dotfiles in ~"
