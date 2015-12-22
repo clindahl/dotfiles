@@ -4,6 +4,12 @@
 
 # If not running interactively, don't do anything
 export TERM="xterm-256color"
+export EDITOR=vim
+
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+. /home/claes/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 
 case $- in
     *i*) ;;
@@ -94,6 +100,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias cda='cd ~/linUM/'
+alias r2flow='rsync -avz ~/flow/ root@flow.zeal.nu:~/flow'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

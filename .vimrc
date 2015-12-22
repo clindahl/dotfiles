@@ -16,19 +16,22 @@ Plugin 'christoomey/vim-tmux-navigator'
 " on try-out from John Crepezzi
 " Blend-ins
 Plugin 'sickill/vim-pasta'
+Plugin 'ConradIrwin/vim-bracketed-paste'
 Plugin 'scrooloose/syntastic'
 Plugin 'ervandew/supertab'
 " NoBlend-ins
 Plugin 'vim-scripts/ZoomWin'
 Plugin 'vim-scripts/tComment'
-Plugin 'FelikZ/ctrlp-py-matcher'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tristen/vim-sparkup'
 
 call vundle#end()
 " General settings
 syntax on
 filetype indent plugin on
-colorscheme molokai
+set t_Co=256
+let g:solarized_termcolors=256
+colorscheme pyte
 set hlsearch
 set rnu
 set t_ut=
@@ -56,12 +59,32 @@ let mapleader = ","
 nmap <leader>h :tabnew %:h<CR>
 nmap <leader>t :tabnew<CR>
 
+
+nnoremap <A-j> :m+<CR>==
+nnoremap <A-k> :m-2<CR>==
+inoremap <A-j> <Esc>:m+<CR>==gi
+inoremap <A-k> <Esc>:m-2<CR>==gi
+vnoremap <A-j> :m'>+<CR>gv=gv
+vnoremap <A-k> :m-2<CR>gv=gv
+
+
+
+
 "PLUGIN SETUPS
 " Powerline setup
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 12
 set laststatus=2
 
-" Nerdtree setup
+" ctrl-p setup "
+let g:ctrlp_follow_symlinks=1
+let g:ctrlp_root_markers = ['.ctrlp']
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_match_window = ''
+let g:ctrlp_max_files = ''
+let g:ctrlp_max_depth = 40
+let g:ctrlp_show_hidden = 1
+
+" nerdtree setup
 map <F2> :NERDTreeToggle<CR>
 
 " Python-mode setup

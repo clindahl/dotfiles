@@ -39,5 +39,5 @@ set-option -g message-bg colour32
 # set-option -g display-panes-colour colour166
 
 set-option -g mode-fg colour232
-set-option -g mode-bg colour32
+set-option -g mode-bg colour88
 
