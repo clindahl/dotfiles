@@ -72,6 +72,7 @@ vnoremap <A-k> :m-2<CR>gv=gv
 
 "PLUGIN SETUPS
 " Powerline setup
+"let g:Powerline_symbols = 'fancy'
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 12
 set laststatus=2
 
