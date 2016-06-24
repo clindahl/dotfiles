@@ -31,7 +31,7 @@ syntax on
 filetype indent plugin on
 set t_Co=256
 let g:solarized_termcolors=256
-colorscheme pyte
+colorscheme molokai
 set hlsearch
 set rnu
 set t_ut=
