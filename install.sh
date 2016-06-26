@@ -4,7 +4,7 @@
 
 dir=~/dotfiles
 olddir=~/dotfiles_old
-files=".bashrc .vimrc .tmux.conf .vim .fonts .netrwhist"
+files=".bashrc .vimrc .tmux.conf .vim .fonts installfonts.sh .netrwhist"
 
 # backup of old files
 echo "Backup up dotfiles in ~"
@@ -18,6 +18,9 @@ for file in $files; do
 	echo "Creating symlink to $file in home directory."
 	ln -s $dir/$file ~/$file
 done
+
+# install powerline fonts 
+source ~/installfonts.sh 
 
 source ~/.bashrc
 source ~/.vimrc
