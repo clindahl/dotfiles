@@ -6,11 +6,14 @@
 export TERM="xterm-256color"
 export EDITOR=vim
 
+<<<<<<< HEAD
 #powerline-daemon -q
 #POWERLINE_BASH_CONTINUATION=1
 #POWERLINE_BASH_SELECT=1
 #. /home/claes/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 
+=======
+>>>>>>> master
 case $- in
     *i*) ;;
       *) return;;
